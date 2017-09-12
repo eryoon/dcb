@@ -1,6 +1,5 @@
 function greet(name) {
-    // Modify this so it prints "Hello, <name>!"
-    return name;
+    return "Hello, " + name + "!";
 }
 
 // This line is to help us run tests
