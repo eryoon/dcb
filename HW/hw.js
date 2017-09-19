@@ -1,0 +1,1 @@
+var name = "Vorenberg"; console.log(name == "Vorenberg" ? "You're the head of school!" : (name == "Simmons" ? "You're the head of Upper School!" : name));
