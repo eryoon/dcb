@@ -1,15 +1,29 @@
-// Import the code from morse.js to keep this code clean
+
 var morse = require("./morse");
 
 function encode(msg) {
-    // Takes a string msg and returns the resulting Morse code
+
     var result = "";
+    msg = msg.toUpperCase();
+    
+    for(var j in msg){
+        var i = msg[j];
+        var morseEncoded = morse[i];
+        
+        if(morseEncoded === undefined){ //ALWAYS USE === IF COMPARING TO A FALSEY VALUE!
+            //throw "Character not found in morse tables";
+            result += "?";
+        
+        }else{
+            result += morseEncoded;
+            if(j != msg.length - 1 && i != " "){
+                result += " ";
+            }
+            
+        }
 
-    // Here, we need to loop through the message and get the resulting morse for each character
-    // Also, don't forget to add a single space after each encoded letter, but not after spaces 
-
+    }
     return result;
 }
 
-// We need this line for testing
 module.exports = encode;
