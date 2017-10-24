@@ -62,33 +62,35 @@ function draw() {
 
     if (foreBallast > aftBallast && sub.rotation <= 10) {
         // Set sub's rotationSpeed to subRotationSpeed
+        sub.subRotationSpeed = subRotationSpeed + 1;
         
     } else if (foreBallast < aftBallast && sub.rotation >= -10) {
         // Set sub's rotationSpeed to the negative value of subRotationSpeed
-        
+        sub.subRotationSpeed = -subRotationSpeed - 1;
     } else {
         // If the ballast is even, stop rotation
-        
+        sub.subRotationSpeed = 0;
     }
 
     if (keyWentDown("f")) {
         // Add fore ballast, but only when there's room left in the tank
-        
+        if(foreBallast < maxBallast) foreBallast++;
     }
 
     if (keyWentDown("r")) {
         // Dump fore ballast, but only when it isn't empty
-        
+        if(foreBallast > 0) foreBallast--;
     }
 
     if (keyWentDown("a")) {
         // Add aft ballast, but only when there's room left in the tank
+        if(aftBallast < maxBallast) aftBallast++;
         
     }
 
     if (keyWentDown("q")) {
         // Dump aft ballast, but only when it isn't empty
-        
+        if(aftBallast > 0) aftBallast--;
     }
 
     if (keyWentDown("space")) {

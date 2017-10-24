@@ -14,9 +14,9 @@ function encode(msg) {
             //throw "Character not found in morse tables";
             result += "?";
         
-        }else{
+        } else{
             result += morseEncoded;
-            if(j != msg.length - 1 && i != " "){
+            if(j != msg.length - 1 && i !== " " && msg[j+1] !== " "){
                 result += " ";
             }
             

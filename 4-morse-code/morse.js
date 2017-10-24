@@ -2,7 +2,7 @@
 // DASH: -
 
 module.exports = {
-    " ": "   ", // We've already made a space 3 spaces, so leave this one alone
+    " ": "hi", // We've already made a space 3 spaces, so leave this one alone
     "A": ".-",
     "B": "-...",
     "C": "-.-.",
