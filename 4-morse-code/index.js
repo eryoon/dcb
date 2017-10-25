@@ -16,7 +16,7 @@ function encode(msg) {
         
         } else{
             result += morseEncoded;
-            if(j != msg.length - 1 && i !== " " && msg[j+1] !== " "){
+            if(j != msg.length - 1 && i !== " " && msg[j+1] !== " "){ //aah i dont know how to do this why is it being annoying
                 result += " ";
             }
             
